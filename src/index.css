@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-green-light: #10b981;
+  --color-brand-green: #059669;
+  --color-brand-green-dark: #065f46;
+  --color-brand-red: #ef4444;
+  --color-brand-dark: #0f172a;
+  --color-brand-slate: #1e293b;
+
+  /* Custom Color Mapping to preserve custom-designed layers and avoid whiteouts */
+  --color-slate-150: #f1f5f9;
+  --color-slate-205: #cbd5e1;
+  --color-slate-650: #576071;
+  --color-slate-750: #293548;
+  --color-slate-805: #1e293b;
+  --color-slate-850: #1a2333;
+  --color-slate-905: #0f172a;
+  
+  --color-blue-105: #93c5fd;
+  --color-blue-905: #1e3a8a;
+  --color-blue-550: #3b82f6;
+
+  --color-indigo-150: #e0e7ff;
+  --color-indigo-650: #4f46e5;
+
+  --color-emerald-150: #a7f3d0;
+  --color-emerald-650: #059669;
+
+  --color-pink-105: #fbcfe8;
+  --color-pink-850: #9d174d;
+
+  --color-red-105: #fecaca;
+  --color-red-150: #fee2e2;
+  --color-red-650: #dc2626;
+  --color-red-750: #b91c1c;
+  --color-red-955: #7f1d1d;
+
+  --color-yellow-105: #fef08a;
+}
+
+/* Custom scrollbar to keep layout clean and professional */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Call to action soft scale and glow pulse animation */
+@keyframes cta-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(245, 158, 11, 0.25);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.5);
+  }
+}
+
+.animate-cta-pulse {
+  animation: cta-pulse 1.4s infinite ease-in-out;
+}
+
+/* Subtle pulse scale and border glow for Free Tool button */
+@keyframes free-tool-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 4px rgba(245, 158, 11, 0.15);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+  }
+}
+
+.animate-free-tool-pulse {
+  animation: free-tool-pulse 2s infinite ease-in-out;
+}
+
